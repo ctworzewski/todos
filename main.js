@@ -15,16 +15,17 @@ function handleClick() {
 
 function addTask() {
     let item = document.createElement('li');
+    let btn = document.createElement('button');
     value = input.value;
     arr.push(value);
     ul.appendChild(item);
+    ul.appendChild(btn)
     item.innerHTML = value;
+    btn.innerHTML = 'Usuń';
     input.value = '';
-    removeTask();
+    // removeTask();
 }
 
 function removeTask() {
-    
-    del.textContent = 'usuń';
 
 }
