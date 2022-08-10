@@ -12,6 +12,7 @@ function handleClick(e) {
     value = input.value;
     arr.push(value);
     ul.appendChild(item);
+    item.innerHTML = value;
     console.log(arr);
     input.value = '';
 }
