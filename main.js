@@ -25,5 +25,5 @@ function removeTask(e) {
     console.log('test kliknięcia usuń');
     console.log(click);
     ul.removeChild(item);
-    ul.removeChild(btnDelTask);
+    item.remove(btnDelTask);
 }
