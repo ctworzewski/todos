@@ -1,19 +1,21 @@
 const $ = document.querySelector.bind(document);
-const allBtn = document.querySelector('.boxApp');
+const addTask = document.querySelector('.addTask');
 const input = document.querySelector('.input');
 const listTask = document.querySelector('.listTasks');
 
 const  arr = [];
 
-allBtn.addEventListener('click', handleClick);
+addTask.addEventListener('click', handleClick);
 
 function handleClick(e) {
     console.log(e.target);
     let value = input.value;
     let item = document.createElement('li');
-
-    item.appendChild(value);
-    listTask.appendChild(item);
+    arr.push(value);
+    console.log(arr);
+    input.value = '';
+    // item.appendChild(value);
+    // listTask.appendChild(item);
 
     console.log(input.value);
     if (value != undefined) {
