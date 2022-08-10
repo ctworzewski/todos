@@ -5,27 +5,32 @@ let ul = document.querySelector('.listTask');
 
 let  arr = [];
 let value = input.value;
-let del = document.createElement('button');
-add.addEventListener('click', handleClick);
-del.addEventListener('click', removeTask);
-function handleClick() {
+// let del = document.createElement('button');
+let btnDelTask = document.createElement('button');
+add.addEventListener('click', addTask);
+btnDelTask.addEventListener('click', removeTask);
+function mainApp() {
     addTask();
+    removeTask();
     
 }
 
+let item = document.createElement('li');
 function addTask() {
-    let item = document.createElement('li');
-    let btn = document.createElement('button');
     value = input.value;
     arr.push(value);
     ul.appendChild(item);
-    ul.appendChild(btn)
+    ul.appendChild(btnDelTask)
     item.innerHTML = value;
-    btn.innerHTML = 'Usuń';
+    btnDelTask.innerHTML = 'Usuń';
     input.value = '';
     // removeTask();
 }
 
-function removeTask() {
-
+function removeTask(e) {
+    let click = e.target;
+    console.log('test kliknięcia usuń');
+    console.log(click);
+    ul.removeChild(item);
+    ul.removeChild(btnDelTask);
 }
