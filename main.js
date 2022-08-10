@@ -1,27 +1,17 @@
-const $ = document.querySelector.bind(document);
 const addTask = document.querySelector('.addTask');
 const input = document.querySelector('.input');
-const listTask = document.querySelector('.listTasks');
+let ul = document.querySelector('.listTask');
 
-const  arr = [];
-
+let  arr = [];
+let value = input.value;
 addTask.addEventListener('click', handleClick);
 
 function handleClick(e) {
-    console.log(e.target);
-    let value = input.value;
     let item = document.createElement('li');
+    console.log(e.target);
+    value = input.value
+    ul.appendChild(item);
     arr.push(value);
     console.log(arr);
     input.value = '';
-    // item.appendChild(value);
-    // listTask.appendChild(item);
-
-    console.log(input.value);
-    if (value != undefined) {
-
-    }
-
-
-
 }
