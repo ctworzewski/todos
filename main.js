@@ -1,21 +1,15 @@
 const add = document.querySelector('.addTask');
 const input = document.querySelector('.input');
-let ul = document.querySelector('.listTask');
-// const del = document.querySelector('.del');
 
-let  arr = [];
-let value = input.value;
-// let del = document.createElement('button');
+let ul = document.querySelector('.listTask');
 let btnDelTask = document.createElement('button');
+let item = document.createElement('li');
+let value = input.value;
+let  arr = [];
+
 add.addEventListener('click', addTask);
 btnDelTask.addEventListener('click', removeTask);
-function mainApp() {
-    addTask();
-    removeTask();
-    
-}
 
-let item = document.createElement('li');
 function addTask() {
     value = input.value;
     arr.push(value);
@@ -24,7 +18,6 @@ function addTask() {
     item.innerHTML = value;
     btnDelTask.innerHTML = 'Usuń';
     input.value = '';
-    // removeTask();
 }
 
 function removeTask(e) {
