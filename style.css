@@ -15,5 +15,12 @@ body {
 
 .boxAll {
     /* display: flex; */
-    display: flexbox;
+    display: inline;
+}
+
+.circle2 {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50% 50%;
 }
