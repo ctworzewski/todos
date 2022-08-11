@@ -8,13 +8,26 @@ function addTask() {
     let value = input.value;
     let item = document.createElement('li');
     let btnDelTask = document.createElement('button');
+    let btnJobDone = document.createElement('button');
+
+    let circleBox = document.createElement('div');
+    let BoxAll = document.createElement('div');
     
     if (input.value !== '') {
         value = input.value;
-    item.innerHTML = value;
-    ul.appendChild(item);
-    ul.appendChild(btnDelTask);
-    btnDelTask.innerHTML = 'Usuń';
+        item.innerHTML = value;
+        ul.appendChild(BoxAll);
+        BoxAll.appendChild(circleBox);
+        BoxAll.appendChild(item);
+        BoxAll.appendChild(btnDelTask);
+        BoxAll.appendChild(btnJobDone);
+        BoxAll.classList.add*('boxAll');
+
+        btnJobDone.innerHTML = 'Zakończ';
+        btnDelTask.innerHTML = 'Usuń';
+        btnJobDone.classList.add('job-done');
+        circleBox.classList.add('circle');
+        // btnDelTask.class
     input.value = '';
     btnDelTask.addEventListener('click', function() {
         removeTask(item,btnDelTask);
