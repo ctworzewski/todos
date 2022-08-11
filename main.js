@@ -7,24 +7,25 @@ let  arr = [];
 
 
 
+let boxItem = document.createElement('div');
 add.addEventListener('click',  addTask);
 
 
-let boxItem = document.createElement('div');
 let btnDelTask = document.createElement('button');
-let item = document.createElement('li');
 function addTask() {
-    btnDelTask.addEventListener('click', removeTask);
+    let item = document.createElement('li');
+    
     value = input.value;
-    // arr.push(value);
-    boxItem.classList.add('boxItem')
+    arr.push(value);
+    boxItem.classList.add('boxItem');
     ul.appendChild(boxItem);
     boxItem.appendChild(item);
-    boxItem.appendChild(btnDelTask)
+    boxItem.appendChild(btnDelTask);
     item.innerHTML = value;
     btnDelTask.innerHTML = 'Usuń';
     input.value = '';
 }
+btnDelTask.addEventListener('click', removeTask);
 
 
 function removeTask() {
