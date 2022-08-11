@@ -9,7 +9,8 @@ function addTask() {
     let item = document.createElement('li');
     let btnDelTask = document.createElement('button');
     
-    value = input.value;
+    if (input.value !== '') {
+        value = input.value;
     item.innerHTML = value;
     ul.appendChild(item);
     ul.appendChild(btnDelTask);
@@ -18,6 +19,10 @@ function addTask() {
     btnDelTask.addEventListener('click', function() {
         removeTask(item,btnDelTask);
     });
+    } else {
+        input.value = 'podaj zadanie';
+        console.log('podaj zadanie');
+    }
 }
 
 
