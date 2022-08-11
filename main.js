@@ -1,29 +1,33 @@
 const add = document.querySelector('.addTask');
 const input = document.querySelector('.input');
-
+ 
 let ul = document.querySelector('.listTask');
-let btnDelTask = document.createElement('button');
-let item = document.createElement('li');
 let value = input.value;
 let  arr = [];
 
-add.addEventListener('click', addTask);
-btnDelTask.addEventListener('click', removeTask);
 
+
+add.addEventListener('click',  addTask);
+
+
+let boxItem = document.createElement('div');
+let btnDelTask = document.createElement('button');
+let item = document.createElement('li');
 function addTask() {
+    btnDelTask.addEventListener('click', removeTask);
     value = input.value;
-    arr.push(value);
-    ul.appendChild(item);
-    ul.appendChild(btnDelTask)
+    // arr.push(value);
+    boxItem.classList.add('boxItem')
+    ul.appendChild(boxItem);
+    boxItem.appendChild(item);
+    boxItem.appendChild(btnDelTask)
     item.innerHTML = value;
     btnDelTask.innerHTML = 'Usuń';
     input.value = '';
 }
 
-function removeTask(e) {
-    let click = e.target;
-    console.log('test kliknięcia usuń');
-    console.log(click);
-    ul.removeChild(item);
-    item.remove(btnDelTask);
+
+function removeTask() {
+    ul.remove(boxItem);
+    // ul.remove(btnDelTask);
 }
