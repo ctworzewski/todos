@@ -1,46 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <form>
+      <input class="input" type="text" placeholder="dodaj zadanie" />
+      <button class="add">dodaj</button>
+    </form>
+
+    <ul class="tasksList">
+      <li class="item">
+        <input class="input2" type="checkbox" name="" id="" />Nauka React
+        <button>Usuń</button>
+      </li>
+    </ul>
     <script src="main.js" defer></script>
-</head>
-<body>
-    <div class="boxApp">
-        <h1>Todos</h1>
-        <input type="text" class="input">
-        <button class="addTask">
-            Dodaj 
-        </button>
-        <div class="boxTask">
-            <ul class="listTask">
-            </ul>
-            </div>
-    </div>
-
-    <!-- <button type="text" > -->
-        <button class="circle2"></button>
-        <button class="circle2"></button>
-        <span>tt</span>
-        <span>tt</span>
-        <span>tt</span>
-        <span>tt</span>
-        
-        <div class="test">
-            <ul>
-                <button class="circle2"></button>
-                <!-- <li>ddd</li> -->
-                <li style="display:inline">test</li>
-                <button class="circle2">Zakończ</button>
-
-                <button class="circle2">Usuń</button>
-
-
-            </ul>
-        </div>
-    
-</body>
+  </body>
 </html>
