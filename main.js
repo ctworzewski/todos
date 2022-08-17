@@ -1,11 +1,9 @@
 const $ = document.querySelector.bind(document);
-
 const input = document.querySelector(".input");
 const btn = document.querySelector(".add");
 const tasksList = document.querySelector(".tasksList");
-
-const appNode = $('[data-app="all"]');
-
+const del = document.querySelector('.del');
+// const appNode = $('[data-app="all"]');
 let currentModeName;
 function addTask(e) {
   const item = document.createElement("li");
@@ -23,41 +21,50 @@ function addTask(e) {
   item.append(btnDel);
   e.preventDefault();
   input.value = "";
+  btnDel.addEventListener('click', function() {
+    deleteTask(item)
+  });
+
+  checkbox.addEventListener('click', function() {
+    jobDone(item);
+  })
+
 }
 
-function showStatus(e) {
-    const action = e.target.dataset.action;
-    console.log(action);
+function deleteTask(a) {
+    tasksList.removeChild(a);
 
-    switch (action) {
-        case "ALL":
-            allTask();
-            break;
-        case "ACTIVE":
-            activeTask();
-            break;
-        case "COMPLETED":
-            completedTask();
-            break;
-            default:
-            return;
+    function jobDone(a) {
     }
 }
-
-
-
-
-function allTask() {
-    console.log('wszystkie zadania');
-}
-function activeTask() {
-    console.log('aktywne zadania');
-}
-function completedTask() {
-    console.log('ukończone zadania');
-}
-
-
-
 btn.addEventListener("click", addTask);
-appNode.addEventListener('click', showStatus);
+
+// function showStatus(e) {
+//     const action = e.target.dataset.action;
+//     console.log(action);
+
+//     switch (action) {
+//         case "ALL":
+//             allTask();
+//             break;
+//         case "ACTIVE":
+//             activeTask();
+//             break;
+//         case "COMPLETED":
+//             completedTask();
+//             break;
+//             default:
+//             return;
+//     }
+// } 
+
+// function allTask() {
+//     console.log('wszystkie zadania');
+// }
+// function activeTask() {
+//     console.log('aktywne zadania');
+// }
+// function completedTask() {
+//     console.log('ukończone zadania');
+// }
+
