@@ -35,8 +35,10 @@ function deleteTask(a) {
 
 }
 function jobDone(a) {
-  tasksList.classList.add('job-done');
+  a.classList.add('job-done');
 }
+
+
 btn.addEventListener("click", addTask);
 
 // function showStatus(e) {
