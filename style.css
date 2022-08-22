@@ -1,3 +1,14 @@
 .item {
     list-style: none;
 }
+
+.job-done {
+    background-color: green;
+}
+
+.checbox-circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color:green
+}

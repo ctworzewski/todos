@@ -11,6 +11,7 @@ function addTask(e) {
   let value = input.value;
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
+  checkbox.classList.add('checbox-circle');
   const btnDel = document.createElement("button");
   btnDel.textContent = "Usuń";
 
